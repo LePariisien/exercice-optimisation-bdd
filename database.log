@@ -1,0 +1,301 @@
+1732013894562|35|statement|select * from information_schema.sequences
+1732013894645|2|statement|select * from "public"."projet" where 1=0
+1732013894660|2|statement|select * from "public"."users" where 1=0
+1732013894703|2|statement|select * from "public"."projet" where 1=0
+1732013894714|3|statement|select * from "public"."users" where 1=0
+1732014410061|9|statement|select * from information_schema.sequences
+1732014410122|1|statement|select * from "public"."projet" where 1=0
+1732014410137|1|statement|select * from "public"."users" where 1=0
+1732014410161|1|statement|select * from "public"."projet" where 1=0
+1732014410166|1|statement|select * from "public"."users" where 1=0
+1732014441146|6|statement|insert into users (email,name) values ('test@string','stesttring')
+1732014441163|2|statement|insert into projet (description,name) values ('testeststring','namestring')
+1732014441170|2|statement|insert into task (projet_id,status,title,users_id) values (5,'string','string',NULL)
+1732014441198|2|statement|insert into users_projet (users_id,projet_id) values (5,5)
+1732014441207|4|commit|
+1732014442466|1|statement|insert into users (email,name) values ('test@string','stesttring')
+1732014442468|0|statement|insert into projet (description,name) values ('testeststring','namestring')
+1732014442469|1|statement|insert into task (projet_id,status,title,users_id) values (6,'string','string',NULL)
+1732014442472|1|statement|insert into users_projet (users_id,projet_id) values (6,6)
+1732014442477|3|commit|
+1732014557375|3|statement|select u1_0.users_id,u1_0.email,u1_0.name from users u1_0
+1732014557399|6|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=1
+1732014557411|5|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=2
+1732014557415|2|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=3
+1732014557418|1|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=4
+1732014557422|2|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=5
+1732014557424|1|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=6
+1732014557429|1|commit|
+1732014557439|2|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=1
+1732014557445|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732014557449|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=2
+1732014557450|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=3
+1732014557453|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=4
+1732014557457|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732014557459|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=5
+1732014557462|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=5
+1732014557464|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=6
+1732014557468|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=6
+1732015047164|4|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732015047173|4|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=1
+1732015047179|3|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732015075675|1|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732015075677|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=1
+1732015075680|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732015075683|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732021360833|11|statement|select * from information_schema.sequences
+1732021360869|7|statement|create table utilisateur_projet (user_users_id bigint not null, projets_projet_id bigint not null, projet_projet_id bigint not null)
+1732021360895|2|statement|select * from "public"."projet" where 1=0
+1732021360905|2|statement|select * from "public"."users" where 1=0
+1732021360926|15|statement|alter table if exists utilisateur_projet add constraint FKl0aduj8euboxin5g406fysg8i foreign key (projets_projet_id) references projet
+1732021360935|8|statement|alter table if exists utilisateur_projet add constraint FKf42wd2negfic9bek0ecl3fp6a foreign key (user_users_id) references users
+1732021360942|5|statement|alter table if exists utilisateur_projet add constraint FKr5fqc1i0esx53t18ktfama30e foreign key (projet_projet_id) references projet
+1732021459510|9|statement|select * from information_schema.sequences
+1732021459573|1|statement|select * from "public"."projet" where 1=0
+1732021459586|1|statement|select * from "public"."users" where 1=0
+1732021459614|1|statement|select * from "public"."projet" where 1=0
+1732021459620|1|statement|select * from "public"."users" where 1=0
+1732021459636|1|statement|select * from "public"."projet" where 1=0
+1732021459640|1|statement|select * from "public"."projet" where 1=0
+1732021459644|1|statement|select * from "public"."users" where 1=0
+Fff 
+
+1732021520883|3|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732021520911|2|statement|select p1_0.user_users_id,p1_1.projet_id,p1_1.description,p1_1.name from utilisateur_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projets_projet_id where p1_0.user_users_id=1
+1732021524793|3|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732021524795|1|statement|select p1_0.user_users_id,p1_1.projet_id,p1_1.description,p1_1.name from utilisateur_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projets_projet_id where p1_0.user_users_id=1
+1732021533859|4|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732021533863|1|statement|select p1_0.user_users_id,p1_1.projet_id,p1_1.description,p1_1.name from utilisateur_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projets_projet_id where p1_0.user_users_id=1
+1732021719511|13|statement|select * from information_schema.sequences
+1732021719576|1|statement|select * from "public"."projet" where 1=0
+1732021719590|2|statement|select * from "public"."users" where 1=0
+1732021719617|2|statement|select * from "public"."projet" where 1=0
+1732021719624|2|statement|select * from "public"."users" where 1=0
+1732021719648|3|statement|select * from "public"."projet" where 1=0
+1732021719655|2|statement|select * from "public"."projet" where 1=0
+1732021719662|2|statement|select * from "public"."users" where 1=0
+1732021728436|4|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732021728486|4|statement|select p1_0.user_users_id,p1_1.projet_id,p1_1.description,p1_1.name from utilisateur_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projets_projet_id where p1_0.user_users_id=1
+1732021978106|5|statement|select * from information_schema.sequences
+1732021978177|12|statement|select * from "public"."projet" where 1=0
+1732021978211|4|statement|select * from "public"."users" where 1=0
+1732021978307|16|statement|select * from "public"."projet" where 1=0
+1732021978324|4|statement|select * from "public"."users" where 1=0
+1732021993608|7|statement|select u1_0.users_id,u1_0.email,u1_0.name,p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users u1_0 left join users_projet p1_0 on u1_0.users_id=p1_0.users_id left join projet p1_1 on p1_1.projet_id=p1_0.projet_id where u1_0.users_id=1
+1732021993652|3|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=1
+1732021993670|3|commit|
+1732021993684|4|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732021993691|3|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+ghghghghhghhghg
+1732022013827|2|statement|select u1_0.users_id,u1_0.email,u1_0.name,p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users u1_0 left join users_projet p1_0 on u1_0.users_id=p1_0.users_id left join projet p1_1 on p1_1.projet_id=p1_0.projet_id where u1_0.users_id=1
+1732022013830|1|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.users_id=1
+1732022013833|1|commit|
+1732022013835|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732022013839|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732022067695|3|statement|select * from information_schema.sequences
+1732022067725|1|statement|select * from "public"."projet" where 1=0
+1732022067732|0|statement|select * from "public"."users" where 1=0
+1732022067741|0|statement|select * from "public"."projet" where 1=0
+1732022067745|0|statement|select * from "public"."users" where 1=0
+1732022124509|5|statement|select * from information_schema.sequences
+1732022124578|2|statement|select * from "public"."projet" where 1=0
+1732022124597|3|statement|select * from "public"."users" where 1=0
+1732022124624|2|statement|select * from "public"."projet" where 1=0
+1732022124632|2|statement|select * from "public"."users" where 1=0
+1732022142469|6|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732022142509|5|commit|
+1732022142525|3|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=1
+1732022142537|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732022142542|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+gujgtugjt 
+
+1732022164320|1|statement|select u1_0.users_id,u1_0.email,u1_0.name,t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title from users u1_0 left join task t1_0 on u1_0.users_id=t1_0.users_id where u1_0.users_id=1
+1732022164323|1|commit|
+1732022164325|1|statement|select p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name from users_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.users_id=1
+1732022164330|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732022164332|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732022227578|6|statement|select * from information_schema.sequences
+1732022227611|0|statement|select * from "public"."projet" where 1=0
+1732022227617|0|statement|select * from "public"."users" where 1=0
+1732022227629|0|statement|select * from "public"."projet" where 1=0
+1732022227632|0|statement|select * from "public"."users" where 1=0
+
+fgtgtgzgrg 
+
+
+1732022392975|7|statement|select * from information_schema.sequences
+1732022393013|1|statement|select * from "public"."projet" where 1=0
+1732022393021|1|statement|select * from "public"."users" where 1=0
+1732022393033|1|statement|select * from "public"."projet" where 1=0
+1732022393037|1|statement|select * from "public"."users" where 1=0
+1732022404009|5|statement|select u1_0.users_id,u1_0.email,u1_0.name,p1_0.users_id,p1_1.projet_id,p1_1.description,p1_1.name,t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id,t2_0.task_id,t2_0.projet_id,t2_0.status,t2_0.title from users u1_0 left join users_projet p1_0 on u1_0.users_id=p1_0.users_id left join projet p1_1 on p1_1.projet_id=p1_0.projet_id left join task t1_0 on p1_1.projet_id=t1_0.projet_id left join task t2_0 on u1_0.users_id=t2_0.users_id where u1_0.users_id=1
+1732022821992|5|statement|select * from information_schema.sequences
+1732022822033|18|statement|create table projet_task (projet_id varchar(255) not null, nbr_tasks integer, primary key (projet_id))
+1732022822064|1|statement|select * from "public"."projet" where 1=0
+1732022822071|0|statement|select * from "public"."users" where 1=0
+1732022822083|0|statement|select * from "public"."projet" where 1=0
+1732022822087|0|statement|select * from "public"."users" where 1=0
+1732023947607|6|statement|select * from information_schema.sequences
+1732023947638|11|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732023947675|1|statement|select * from "public"."projet" where 1=0
+1732023947685|1|statement|select * from "public"."users" where 1=0
+1732023947700|1|statement|select * from "public"."projet" where 1=0
+1732023947704|0|statement|select * from "public"."users" where 1=0
+1732024079762|9|statement|select * from information_schema.sequences
+1732024079794|8|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732024079829|2|statement|select * from "public"."projet" where 1=0
+1732024079840|1|statement|select * from "public"."users" where 1=0
+1732024079860|3|statement|select * from "public"."projet" where 1=0
+1732024079871|3|statement|select * from "public"."users" where 1=0
+1732024307639|9|statement|select * from information_schema.sequences
+1732024307669|6|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732024307706|2|statement|select * from "public"."projet" where 1=0
+1732024307715|1|statement|select * from "public"."users" where 1=0
+1732024307732|1|statement|select * from "public"."projet" where 1=0
+1732024307737|1|statement|select * from "public"."users" where 1=0
+1732024358188|3|statement|select p1_0.projet_id,p1_0.description,p1_0.name from projet p1_0
+1732024358209|1|commit|
+1732024358219|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=1
+1732024358224|2|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=2
+1732024358227|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=3
+1732024358228|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=4
+1732024358230|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=5
+1732024358233|1|statement|select t1_0.projet_id,t1_0.task_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 where t1_0.projet_id=6
+1732024924132|13|statement|select * from information_schema.sequences
+1732024924173|9|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732024924246|2|statement|select * from "public"."projet" where 1=0
+1732024924259|2|statement|select * from "public"."users" where 1=0
+1732024924289|2|statement|select * from "public"."projet" where 1=0
+1732024924298|2|statement|select * from "public"."users" where 1=0
+1732027092842|6|statement|select * from information_schema.sequences
+1732027092868|6|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732027092902|1|statement|select * from "public"."projet" where 1=0
+1732027092914|1|statement|select * from "public"."users" where 1=0
+1732027092930|1|statement|select * from "public"."projet" where 1=0
+1732027092934|0|statement|select * from "public"."users" where 1=0
+1732027393752|5|statement|select * from information_schema.sequences
+1732027393780|5|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732027393812|1|statement|select * from "public"."projet" where 1=0
+1732027393823|1|statement|select * from "public"."users" where 1=0
+1732027393839|1|statement|select * from "public"."projet" where 1=0
+1732027393842|1|statement|select * from "public"."users" where 1=0
+1732027443786|6|statement|select * from information_schema.sequences
+1732027443816|6|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732027443853|1|statement|select * from "public"."projet" where 1=0
+1732027443864|1|statement|select * from "public"."users" where 1=0
+1732027443882|1|statement|select * from "public"."projet" where 1=0
+1732027443886|1|statement|select * from "public"."users" where 1=0
+1732027464639|4|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0
+1732027464647|2|commit|
+1732027720539|5|statement|select * from information_schema.sequences
+1732027720565|5|statement|alter table if exists projet_task alter column projet_id set data type bigint
+1732027720595|1|statement|select * from "public"."projet" where 1=0
+1732027720606|1|statement|select * from "public"."users" where 1=0
+1732027720623|1|statement|select * from "public"."projet" where 1=0
+1732027720627|1|statement|select * from "public"."users" where 1=0
+1732027941299|5|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0
+1732027941313|2|rollback|
+1732027960927|2|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0 where pt1_0.projet_id=1
+1732027960954|1|rollback|
+1732027968195|1|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0 where pt1_0.projet_id=1
+1732027968218|1|rollback|
+1732027995569|1|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0
+1732027995571|1|rollback|
+1732028000572|1|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0 where pt1_0.projet_id=1
+1732028000591|1|rollback|
+1732028630059|4|statement|select * from information_schema.sequences
+1732028630098|1|statement|select * from "public"."projet" where 1=0
+1732028630108|1|statement|select * from "public"."users" where 1=0
+1732028630124|1|statement|select * from "public"."projet" where 1=0
+1732028630129|0|statement|select * from "public"."users" where 1=0
+1732028643590|6|statement|REFRESH MATERIALIZED VIEW projet_task_count
+1732028643601|1|rollback|
+1732028818693|5|statement|select * from information_schema.sequences
+1732028818733|2|statement|select * from "public"."projet" where 1=0
+1732028818742|1|statement|select * from "public"."users" where 1=0
+1732028818757|1|statement|select * from "public"."projet" where 1=0
+1732028818762|1|statement|select * from "public"."users" where 1=0
+1732028917783|4|statement|select * from information_schema.sequences
+1732028917824|2|statement|select * from "public"."projet" where 1=0
+1732028917834|1|statement|select * from "public"."users" where 1=0
+1732028917853|1|statement|select * from "public"."projet" where 1=0
+1732028917859|1|statement|select * from "public"."users" where 1=0
+1732028928111|6|statement|select pt1_0.projet_id,pt1_0.nbr_tasks from projet_task pt1_0
+1732028928121|2|rollback|
+1732028951468|5|statement|select * from information_schema.sequences
+1732028951509|2|statement|select * from "public"."projet" where 1=0
+1732028951518|1|statement|select * from "public"."users" where 1=0
+1732028951535|1|statement|select * from "public"."projet" where 1=0
+1732028951541|1|statement|select * from "public"."users" where 1=0
+1732029081029|5|statement|select * from information_schema.sequences
+1732029081069|1|statement|select * from "public"."projet" where 1=0
+1732029081077|1|statement|select * from "public"."users" where 1=0
+1732029081095|1|statement|select * from "public"."projet" where 1=0
+1732029081103|3|statement|select * from "public"."users" where 1=0
+1732029110124|4|statement|select pt1_0.projet_id,pt1_0.nombre_tasks from projet_task pt1_0
+1732029110145|2|commit|
+1732029478216|3|statement|select * from information_schema.sequences
+1732029478281|31|statement|select * from "public"."projet" where 1=0
+1732029478293|2|statement|select * from "public"."users" where 1=0
+1732029478316|1|statement|select * from "public"."projet" where 1=0
+1732029478323|2|statement|select * from "public"."users" where 1=0
+1732029571561|5|statement|select * from information_schema.sequences
+1732029571605|1|statement|select * from "public"."projet" where 1=0
+1732029571621|2|statement|select * from "public"."users" where 1=0
+1732029571641|1|statement|select * from "public"."projet" where 1=0
+1732029571646|0|statement|select * from "public"."users" where 1=0
+1732029609088|5|statement|select * from information_schema.sequences
+1732029609130|1|statement|select * from "public"."projet" where 1=0
+1732029609139|1|statement|select * from "public"."users" where 1=0
+1732029609154|1|statement|select * from "public"."projet" where 1=0
+1732029609157|0|statement|select * from "public"."users" where 1=0
+1732029670679|5|statement|select * from information_schema.sequences
+1732029670721|2|statement|select * from "public"."projet" where 1=0
+1732029670734|2|statement|select * from "public"."users" where 1=0
+1732029670755|1|statement|select * from "public"."projet" where 1=0
+1732029670759|0|statement|select * from "public"."users" where 1=0
+1732030238641|7|statement|select * from information_schema.sequences
+1732030238685|1|statement|select * from "public"."projet" where 1=0
+1732030238693|0|statement|select * from "public"."users" where 1=0
+1732030238708|1|statement|select * from "public"."projet" where 1=0
+1732030238714|1|statement|select * from "public"."users" where 1=0
+1732030266220|0|rollback|
+1732030267371|0|rollback|
+1732030268728|0|rollback|
+1732030335085|0|rollback|
+1732030348111|0|rollback|
+1732031401390|5|statement|select * from information_schema.sequences
+1732031401429|1|statement|select * from "public"."projet" where 1=0
+1732031401437|0|statement|select * from "public"."users" where 1=0
+1732031401451|1|statement|select * from "public"."projet" where 1=0
+1732031401456|1|statement|select * from "public"."users" where 1=0
+1732031427308|0|rollback|
+1732050313910|10|statement|select * from information_schema.sequences
+1732050314018|4|statement|select * from "public"."projet" where 1=0
+1732050314036|2|statement|select * from "public"."users" where 1=0
+1732050314065|2|statement|select * from "public"."projet" where 1=0
+1732050314074|2|statement|select * from "public"."users" where 1=0
+1732050541548|4|statement|select * from information_schema.sequences
+1732050541604|2|statement|select * from "public"."projet" where 1=0
+1732050541611|1|statement|select * from "public"."users" where 1=0
+1732050541623|0|statement|select * from "public"."projet" where 1=0
+1732050541626|0|statement|select * from "public"."users" where 1=0
+1732050609807|8|statement|select t1_0.task_id,t1_0.projet_id,t1_0.status,t1_0.title,t1_0.users_id from task t1_0 offset 50 rows fetch first 10 rows only
+1732050609832|4|statement|select count(t1_0.task_id) from task t1_0
+1732050609843|3|commit|
+1732050920473|0|rollback|
+1732050966922|6|statement|select * from information_schema.sequences
+1732050966964|1|statement|select * from "public"."projet" where 1=0
+1732050966972|1|statement|select * from "public"."users" where 1=0
+1732050966984|0|statement|select * from "public"."projet" where 1=0
+1732050966987|0|statement|select * from "public"."users" where 1=0
+1732051525273|3|statement|select * from information_schema.sequences
+1732051525314|1|statement|select * from "public"."projet" where 1=0
+1732051525323|1|statement|select * from "public"."users" where 1=0
+1732051525337|1|statement|select * from "public"."projet" where 1=0
+1732051525341|1|statement|select * from "public"."users" where 1=0
+1732051612974|7|statement|select * from information_schema.sequences
+1732051613028|1|statement|select * from "public"."projet" where 1=0
+1732051613038|1|statement|select * from "public"."users" where 1=0
+1732051613053|0|statement|select * from "public"."projet" where 1=0
+1732051613056|0|statement|select * from "public"."users" where 1=0
